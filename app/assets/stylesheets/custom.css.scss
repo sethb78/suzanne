@@ -25,6 +25,7 @@ body {
 }
 .main-container-wrapper {
   box-shadow: 0 0 10px $dark-color;
+  min-height: 100%;
   
 
 /* Note: This gradient may render differently in browsers that don't support the unprefixed gradient syntax */
@@ -227,3 +228,16 @@ footer {
   }
 }
 
+
+.blog {
+  margin-top: 1em;
+  p {
+    text-align: left;
+  }
+  h3 {
+    margin-bottom: 0;
+  }
+  h5 {
+    margin-top: 0;
+  }
+}
