@@ -1,110 +1,63 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Suzanne Altshuler</title>
-      <%= favicon_link_tag '/favicon2.ico' %>
 
-   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+<head>
+  <title><%= full_title(yield(:title)) %></title>
+  <%= favicon_link_tag '/favicon2.ico' %>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-    <%= csrf_meta_tags %>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,600,800' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Averia+Serif+Libre:400,700' rel='stylesheet' type='text/css'>
-    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-    <script src="js/respond.js"></script>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,600,800' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Averia+Serif+Libre:400,700' rel='stylesheet' type='text/css'>
+  <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+  <script src="js/respond.js"></script>
 </head>
+
+<!-- main content:  header, navbar, body, footer -->
 <div class="main-container-wrapper container">
 
 <header>
-<%= render 'layouts/banner' %>
+  <%= render 'layouts/banner' %>
 </header>
 
+<!-- display horizontal navbar on small screens and non home page -->
 <% if params[:controller] != "static_pages" || params[:action] != "home" %>
-<%= render 'layouts/navbar' %>
+  <%= render 'layouts/navbar' %>
 <% else %>
-<div class="visible-xs">
-<%= render 'layouts/navbar' %>
-</div>
-
-
+  <div class="visible-xs">
+    <%= render 'layouts/navbar' %>
+  </div>
 <% end %>
+<!-- End of horizontal navbar  -->
 
-
+<!-- main content and side bar -->
 <body>
-<div class="main-content">
-  <div class="row">
-    <div class="col-md-8 col-sm-8 col-xs-12 text-center">
-      <%= yield %>
-    </div>
+  <div class="main-content">
+    <div class="row">
+      <div class="col-md-8 col-sm-8 col-xs-12 text-center">
+        <%= yield %>
+      </div>
 
-<aside>
-  <div class="col-md-4 col-sm-4 hidden-xs side_links">
-    <div class="col-md-12 text-right">
-      <%= link_to "Link", "#" %>
-    </div>
-    <div class="col-md-12 text-right">
-      <%= link_to "Link", "#" %>
-    </div>    <div class="col-md-12 text-right">
-      <%= link_to "Link", "#" %>
-    </div>    <div class="col-md-12 text-right">
-      <%= link_to "Link", "#" %>
-    </div>    <div class="col-md-12 text-right">
-      <%= link_to "Link", "#" %>
-    </div>    <div class="col-md-12 text-right">
-      <%= link_to "Link", "#" %>
-    </div>    <div class="col-md-12 text-right">
-      <%= link_to "Link", "#" %>
-    </div>    <div class="col-md-12 text-right">
-      <%= link_to "Link", "#" %>
-    </div>    <div class="col-md-12 text-right">
-      <%= link_to "Link", "#" %>
-    </div>
+    <!-- Side Bar, displays link on desktop home page and .... -->
+    <aside>
+      <div class="col-md-4 col-sm-4 hidden-xs side_links">
+        <% if params[:controller] == "static_pages" && params[:action] == "home" %>
+          <%= render 'horizontal_links' %>
+        <% end %>
+      </div>
+    </aside>
+    <!-- End of side bar -->
   </div>
-</aside>
-</div>
-
 </body>
+<!-- end of main content and side bar -->
+
 <footer>
-  <div class="row">
-  <div class="col-md-8 col-sm-7 col-xs-12">
-  <address>
-  <strong>Suzanne Altshuler</strong>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
-  Philadelphia, PA 19106&nbsp;&nbsp;&bull;&nbsp;&nbsp;
-  <abbr title="Phone">P:</abbr> (732) 986-3404 
-
-</address>
-  </div>
-    <div class="col-md-4 col-sm-5 col-xs-12  social_links ">
-      <ul class="list-inline">
-          <strong>Contact Me:&nbsp;&nbsp;</strong>
-        <li class="email"><%= mail_to("suzanne@suzannealtshuler.com") do %>
-          <i class="icon-envelope-alt icon-2x"></i>
-          <% end %>
-        </li>
-
-        <li class="facebook">
-          <%= link_to("#") do %>
-            <i class="icon-facebook icon-2x"></i>
-          <% end %>
-        </li>
-        <li class="twitter">
-          <%= link_to("#") do %>
-            <i class="icon-twitter icon-2x"></i>
-          <% end %>
-        </li>        
-
-        <li class="linkedin">
-          <%= link_to("#") do %>
-            <i class="icon-linkedin icon-2x"></i>
-          <% end %>
-
-      </ul>
-
-    </div>
-  </div>
+  <%= render 'layouts/footer' %>
 </footer>
-</div>
 
+</div>
+<!-- end of main content wrapper -->
 
 </html>

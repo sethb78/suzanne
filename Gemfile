@@ -11,7 +11,8 @@ end
 group :production do
   gem 'pg', '0.15.1'
 end
-
+gem 'activeadmin', github: 'gregbell/active_admin', branch: 'rails4'
+gem 'devise'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
