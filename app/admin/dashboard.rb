@@ -10,24 +10,21 @@ ActiveAdmin.register_page "Dashboard" do
       end
     end
 
-    # Here is an example of a simple dashboard with columns and panels.
-    #
-    # columns do
-    #   column do
-    #     panel "Recent Posts" do
-    #       ul do
-    #         Post.recent(5).map do |post|
-    #           li link_to(post.title, admin_post_path(post))
-    #         end
-    #       end
-    #     end
-    #   end
+  section "Recent Blogs" do
+    table_for Blog.order("updated_at desc").limit(5) do
+      column :name do |blog|
+        link_to blog.title, admin_blog_path(blog)
+      end
+      column :updated_at
+    end
+    strong { link_to "View All Blogs", admin_blogs_path }
+       div :class => "clearfix"
+        strong { link_to "Add Blog", new_admin_blog_path}
 
-    #   column do
-    #     panel "Info" do
-    #       para "Welcome to ActiveAdmin."
-    #     end
-    #   end
-    # end
+
+  end
+
+
+
   end # content
 end
