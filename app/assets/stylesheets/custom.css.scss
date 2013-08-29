@@ -128,15 +128,6 @@ height: 1  }
       border-color: #a1dbe3
     }
   }
-  .navbar-collapse {
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 5px;
-    border: none;
-    .navbar-nav {
-      li {width: 100%;}
-    }
-  }
 }
 
 iframe {
@@ -155,7 +146,22 @@ aside {
       margin-bottom: 1em;
       padding-left: 0;
       padding-right: 0;
-      a {
+      .panel-body {
+        background: none #3e5657;
+        border-top: none;
+        ul {
+          margin-bottom: 0;
+          li a {
+            background: none lighten(#3e5657, 10%);
+            border-bottom: 1px solid #3e5657;
+            border-top: 1px solid darkgray;
+
+          }
+          li:first-child a { border-top: none}
+          li:last-child  a { border-bottom: none}
+        }
+      }
+      a, ul li a {
         font-family: 'Averia Serif Libre', cursive;  
         font-size: 18px;
         color: white;
@@ -164,9 +170,10 @@ aside {
                 display: block;
       background: none #3e5657;
 
-      &:hover {
+      &:hover, &:focus {
         text-decoration: none;
-        background: darken(#3e5657, 25%);
+        background: darken(#3e5657, 15%);
+        outline: none;
       }
       }
     }
