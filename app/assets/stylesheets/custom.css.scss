@@ -293,9 +293,8 @@ footer {
 .blog-entries-container {
   .blog-entry {
     padding: .75em .3em;
-    h4 { font-weight: 600;}
-    border-top: 3px outset lightgrey;
   }
+    border-top: 3px outset lightgrey;
   .blog-entry:first-child { border-top: none}
 }
 
@@ -303,3 +302,9 @@ footer {
     color: $dark-color;
     &:hover { background: transparent }
   }
+        .blog-date { 
+      font-family: sans-serif;
+      margin-top: .2em;
+      font-weight: normal;
+      font-size: 10px;
+    }
