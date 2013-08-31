@@ -1,1 +1,69 @@
 <%= provide(:title, "Blog Archives") %>
+
+<!-- blog header -->
+<!-- first row containts title and search box -->
+<div class="blog-header">
+  <div class="row">
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <h2 class="text-left no-margin"><strong>Past Blogs</strong></h2>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <%= search_form_for @search, html: {class: "form-inline", role: "form"} do |f| %>
+        <div class="col-xs-10 form-group">
+          <%= f.text_field :title_or_content_cont, :placeholder => 'Search archives...', class: "form-control input-sm" %>
+        </div>
+        <button type="submit" class="icon-button"><i class="icon-search"></i></button>
+      <% end %>
+    </div>
+  </div>
+  <!-- end of first row -->
+
+  <!-- second row displays current view info -->
+  <div class="row ">
+    <div class="col-md-6 col-lg-4 col-sm-5 col-xs-12 text-center blog-display-count">
+      <%= page_entries_info @blogs %>
+    </div>
+    <div class="col-md-6 col-sm-7 col-lg-5 col-lg-offset-3 col-xs-12 text-center">
+      <%= will_paginate @blogs %>
+    </div>
+  </div>
+</div>
+<!-- end of second row -->
+<!-- end of blog header -->
+
+<!-- blog entries -->
+<div class="blog-entries-container">
+  <% @blogs.each do |blog| %>
+    <div class="blog-entry">
+
+      <!-- title -->
+      <div class="row">
+        <div class="col-xs-12">
+        <h4 class= "no-margin"><%= blog.title %></h4>
+        </div>
+      </div>
+      <!-- end of title -->
+
+      <!-- created at date -->
+      <div class="row">
+        <div class= "col-md-12 col-xs-12">
+          <h6 class= "no-margin"><%=  blog.created_at.strftime('%m/%d/%Y at %I:%M%p') %></h6> 
+        </div>
+      </div>
+      <!-- end of date -->
+
+      <!-- excerpt -->
+      <div class="row">
+        <div class="col-md-12 col-xs-12 text-left">
+          <small>
+            <%= truncate(blog.content, length: 400) %>
+            <%= link_to("read more", blog, class: "blog-link") %>
+          </small>
+        </div>
+      </div>
+      <!-- end of excerpt -->
+
+    </div>
+  <% end %>
+</div>
+<!-- end of blog entries -->

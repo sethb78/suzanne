@@ -7,7 +7,9 @@ gem 'rails', '4.0.0'
 # 
 group :development, :test do
 gem 'sqlite3', '1.3.8'
-end
+gem 'faker'
+  end
+
 group :production do
   gem 'pg', '0.15.1'
 end
@@ -51,4 +53,7 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'rails_12factor'
+gem 'will_paginate', '~> 3.0.0'
+gem 'ransack'
+
 

@@ -1,0 +1,33 @@
+<%= provide(:title, @blog.title) %>
+<div class="row">
+  <div class="col-xs-12 col-md-12">
+    <%= link_to("Back to Index", blogs_path, class: "blog-link") %>
+  </div>
+</div>
+
+<!-- blog entries -->
+<!-- title -->
+<div class="row">
+  <div class="col-xs-12">
+    <h4 class= "no-margin"><%= @blog.title %></h4>
+  </div>
+</div>
+<!-- end of title -->
+
+<!-- created at date -->
+<div class="row">
+  <div class= "col-md-12 col-xs-12">
+    <h6 class= "no-margin"><%=  @blog.created_at.strftime('%m/%d/%Y at %I:%M%p') %></h6> 
+  </div>
+</div>
+<!-- end of date -->
+
+<br />
+
+<!-- content -->
+<div class="row">
+  <div class="col-md-12 col-xs-12 text-left">
+    <%= simple_format(@blog.content) %>
+  </div>
+</div>
+<!-- end of content -->
