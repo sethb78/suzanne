@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130828231531) do
+ActiveRecord::Schema.define(version: 20130903211145) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -49,6 +49,44 @@ ActiveRecord::Schema.define(version: 20130828231531) do
   create_table "blogs", force: true do |t|
     t.string   "title"
     t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "professional_experiences", force: true do |t|
+    t.string   "title"
+    t.date     "start"
+    t.date     "end"
+    t.text     "summary"
+    t.string   "bullet_point_1"
+    t.string   "bullet_point_2"
+    t.string   "bullet_point_3"
+    t.string   "bullet_point_4"
+    t.string   "bullet_point_5"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "resume_personals", force: true do |t|
+    t.string   "name"
+    t.string   "city"
+    t.string   "state"
+    t.string   "cell_phone"
+    t.string   "email"
+    t.string   "linkedin"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "zip"
+  end
+
+  create_table "summary_bullet_points", force: true do |t|
+    t.string   "feature"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "summary_texts", force: true do |t|
+    t.text     "summary"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

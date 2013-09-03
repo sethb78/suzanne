@@ -14,7 +14,11 @@ $(document).ready(function(){
   //   "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#3e5657',GradientType=1 )" 
   // }).closest('header').find('.tagline').css({"padding-bottom": "2px"});
 
+$('div').scrollspy({ target: '#navbar-resume-scrollspy' })
 
+$('[data-spy="scroll"]').each(function () {
+  var $spy = $(this).scrollspy('refresh')
+})
 
 });
 

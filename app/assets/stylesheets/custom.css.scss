@@ -9,13 +9,14 @@ $light-color: #A1DBE3;
   background: -ms-linear-gradient(top,  rgba(161,219,227,0.75) 0%,rgba(161,219,227,0.81) 25%,rgba(161,219,227,1) 100%); /* IE10+ */
   background: linear-gradient(to bottom,  rgba(161,219,227,0.75) 0%,rgba(161,219,227,0.81) 25%,rgba(161,219,227,1) 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfa1dbe3', endColorstr='#a1dbe3',GradientType=0 ); /* IE6-9 */
-}
+}css underline
 
 
 .white { color: white}
 .gray { color: gray}
 .lightgray { color: lightgray}
 .no-margin { margin: 0 }
+.underline {text-decoration: underline}
 
 @mixin three_dimensional_button($main_color: #274663) {
   position:relative;
@@ -308,3 +309,77 @@ footer {
       font-weight: normal;
       font-size: 10px;
     }
+
+
+@media(max-width: 768px){
+    .summary_bullet_points > .col-xs-12 {
+    text-align: center;
+  }
+}
+@media(min-width: 769px){
+    .summary_bullet_points > .col-md-12 {
+    text-align: left;
+  }
+}
+@media(max-width: 400px){
+  .resume .resume-header {font-size: 14px !important;}
+}
+nav#navbar-resume-scrollspy ul li {
+  display: table-cell;
+    width: 16.666666667%;
+          box-sizing:border-box;
+      -moz-box-sizing:border-box; /* Firefox */
+    a {
+      padding: 0;
+      height: 60px;
+      width: inherit;
+      text-align: center;
+      vertical-align: middle;
+      display: table-cell;
+      color: $dark-color;
+      &:hover {
+        background-color: $light-color;
+      }
+    }
+  }
+.resume {
+  font-family: 'Times New Roman';
+  background-color: darken(white, 2%);
+  border: 1px solid darken(white, 3%);
+  color: black;
+  
+  hr {
+    border-top: 3px solid black;
+    width: 75%;
+    box-shadow: 1px 1px 1px grey;
+  }
+  .resume-header {
+    font-size: 16px;
+  }
+  .resume-body {
+    font-size: 14px;
+  }
+  .resume_job_header{
+    h5 { 
+      font-family: 'Times New Roman';
+      font-weight: bold;
+      margin: 20px 0 0;
+    }
+    h5:first-child {
+      margin-top: 10px;
+    }
+  }
+}
+
+#navbar-resume-scrollspy {
+  li.active {
+    background-color: $light-color;
+  }
+}
+
+.scrollspy-content {
+height: 300px;
+    margin-top: 10px;
+    overflow: auto;
+    position: relative;
+  }

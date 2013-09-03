@@ -1,0 +1,122 @@
+<%= provide(:title, "Resume") %>
+
+<nav id="navbar-resume-scrollspy" class="navbar-static hidden-xs" role="navigation">
+  <div class="collapse navbar-collapse bs-js-navbar-scrollspy">
+    <ul class="nav navbar-nav">
+      <li><%= link_to("Top", "#top") %></li>
+      <li><%= link_to("Summary", "#summary") %></li>
+      <li><%= link_to("Professional Experience", "#professional_experience") %></li>
+            <li><%= link_to("Leadership Experience & Rewards", "#") %></li>
+
+      <li><%= link_to("Education & Professional Development", "#") %></li>
+
+      <li><%= link_to("Community Activities", "#") %></li>
+
+    </ul>
+  </div>
+</nav>
+
+ <div class=" resume scrollspy-content" data-spy="scroll" data-target="#navbar-resume-scrollspy" data-offset="0">
+
+<div class="resume-header">
+  <h2 id ="top" class="text-center"><%= @personal.name %></h2>
+  <div class="row">
+    <div class="col-md-12 col-xs-12 text-center resume-header">
+    <%= "#{@personal.city}, #{@personal.zip}" %>&nbsp;&#42;&nbsp;
+    <%= "Cell:  #{@personal.cell_phone}" %>&nbsp;&#42;&nbsp;
+    <%= "Email:  #{@personal.email}" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 col-xs-12 text-center resume-header">
+      <%= "LinedIn:  #{@personal.linkedin}" %>
+    </div>
+  </div>
+</div>
+<!-- end of resume header -->
+
+<hr />
+
+
+<!-- start of resume body -->
+<div class="resume-body">
+
+<!-- start of summary section -->
+  <h4 id="summary" class="text-center underline">SUMMARY</h4>
+
+  <!-- start of summary text -->
+  <div class="row resume_summary_text">
+    <div class="col-xs-12 col-md-12 text-left">
+      <%= simple_format @summary_text.summary %>
+    </div>
+  </div>
+  <!-- end of summary text -->
+
+  <!-- start of summary bullet points -->
+  <div class="row summary_bullet_points">
+    <div class="col-xs-12 col-md-4 col-md-offset-2">
+      <ul>
+        <% @summary_bullet_points[0..(@summary_bullet_points.count/2 -1)].each do  |point| %>
+          <li><%= point.feature %></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <ul>
+        <% @summary_bullet_points[(@summary_bullet_points.count/2)..@summary_bullet_points.count].each do  |point| %>
+          <li><%= point.feature %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <!-- end of summary bullet points -->
+<!-- end of summary section -->
+
+<!-- start of professional experience -->
+<h4 id="professional_experience" class="text-center underline">Professional Expereince</h4>
+<% @professional_experience.each do |job| %>
+
+<!-- start of job header -->
+<div class="row resume_job_header">
+  <div class="col-md-8 col-xs-6">
+    <h5 class="text-left"><%= job.title %></h5>
+  </div>
+  <div class="col-md-4 col-xs-6 text-left">
+  <h5><%= "#{job.start.strftime("%Y")} - #{job.end.strftime("%Y")}" %></h5>
+  </div>
+</div>
+<!-- end of job header -->
+
+<!-- start of job summary -->
+<div class="row">
+  <div class="col-md-12 col-xs-12 text-left">
+    <%= job.summary %>
+  </div>
+</div>
+<!-- end of job summary -->
+
+<!-- start of bullet points -->
+<div class="row">
+  <div class="col-md-10 col-md-offset-1 col-xs-12">
+    <ul class="text-left">
+      <% [job.bullet_point_1, job.bullet_point_2, job.bullet_point_3, job.bullet_point_4, job.bullet_point_5].each do |x| %>
+        <% if !x.blank? %>
+          <li><%= x %></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>
+<!-- end of bullet points -->
+
+<% end %>
+<!-- end of professional experience -->
+
+
+
+</div>
+<!-- end of resume body -->
+
+
+</div>
+<!-- end of resume -->

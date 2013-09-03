@@ -36,7 +36,7 @@
 <body>
   <div class="main-content">
     <div class="row">
-      <div class="col-md-8 col-sm-8 col-xs-12 text-center">
+      <div class="<% if params[:action]=="resume" %> col-md-12 col-sm-12 <% else %>col-md-8 col-sm-8 <% end %>col-xs-12 text-center">
         <%= yield %>
       </div>
 

@@ -3,12 +3,40 @@ ActiveAdmin.register_page "Dashboard" do
   menu :priority => 1, :label => proc{ I18n.t("active_admin.dashboard") }
 
   content :title => proc{ I18n.t("active_admin.dashboard") } do
-    div :class => "blank_slate_container", :id => "dashboard_default_message" do
-      span :class => "blank_slate" do
-        span I18n.t("active_admin.dashboard_welcome.welcome")
-        small I18n.t("active_admin.dashboard_welcome.call_to_action")
-      end
+
+  section  link_to "Edit Personal Info", edit_admin_resume_personal_path(ResumePersonal.last.id) do
+    table_for ResumePersonal.all do
+    column :city
+    column :state
+    column :zip
+    column :cell_phone
+    column :email
+    column :linkedin
     end
+end
+
+  section link_to "Edit Summary Text", edit_admin_summary_text_path(SummaryText.last.id) do
+    table_for SummaryText.all do
+      column :summary 
+    end
+  end
+
+  section link_to "Summary Bullet Points", admin_summary_bullet_points_path do
+  table_for SummaryBulletPoint.all.each do
+    column :feature do |feature|
+        link_to feature.feature, edit_admin_summary_bullet_point_path(feature)
+      end
+  end
+end
+
+  section link_to "Professional Expereince", admin_professional_experiences_path do
+  table_for ProfessionalExperience.all.each do
+    column :title do |job|
+        link_to job.title, edit_admin_professional_experience_path(job)
+      end
+  end
+end
+
 
   section "Recent Blogs" do
     table_for Blog.order("updated_at desc").limit(5) do
@@ -23,6 +51,7 @@ ActiveAdmin.register_page "Dashboard" do
 
 
   end
+
 
 
 
