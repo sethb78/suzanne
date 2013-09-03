@@ -10,6 +10,6 @@ class StaticPagesController < ApplicationController
     @personal = ResumePersonal.last
     @summary_text = SummaryText.last
     @summary_bullet_points = SummaryBulletPoint.all
-    @professional_experience = ProfessionalExperience.order("end DESC, start ASC")
+    @professional_experience = ProfessionalExperience.order("job_end DESC, job_start ASC")
   end
 end
