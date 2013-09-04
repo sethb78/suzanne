@@ -15,7 +15,7 @@
     <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
-          <div class="<%= 'active' if params[:action]== 'resume' %>"><%= link_to("Resume", resume_path) %></div>
+          <div class="<%= 'active' if params[:action]== 'resume' %>"><%= link_to("Resume", resume_path, "data-no-turbolink" => true) %></div>
 
       </h4>
     </div>

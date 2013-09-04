@@ -13,7 +13,7 @@
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
       <li class="<%= 'active' if params[:action]== 'home' %>"><%= link_to("Home", root_path) %></li>
-      <li class="<%= 'active' if params[:action]== 'resume' %>"><%= link_to("Resume", resume_path) %></li>
+      <li class="<%= 'active' if params[:action]== 'resume' %>"><%= link_to("Resume", resume_path, "data-no-turbolink" => true) %></li>
             <li><a href="#">Link</a></li>
                   <li><a href="#">Link</a></li>
                         <li><a href="#">Link</a></li>

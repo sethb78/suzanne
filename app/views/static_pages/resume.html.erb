@@ -1,6 +1,6 @@
 <%= provide(:title, "Resume") %>
 
-<nav id="navbar-resume-scrollspy" class="navbar-static hidden-xs" role="navigation">
+<nav id="navbar-resume-scrollspy" class="navbar-static hidden-xs">
   <div class="collapse navbar-collapse bs-js-navbar-scrollspy">
     <ul class="nav navbar-nav">
       <li><%= link_to("Top", "#top") %></li>
@@ -16,7 +16,7 @@
   </div>
 </nav>
 
- <div class=" resume scrollspy-content" data-spy="scroll" data-target="#navbar-resume-scrollspy" data-offset="0">
+ <div class=" resume scrollspy-content" data-spy="scroll" data-target="#navbar-resume-scrollspy" data-offset="10">
 
 <div class="resume-header">
   <h2 id ="top" class="text-center"><%= @personal.name %></h2>
