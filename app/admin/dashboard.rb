@@ -37,6 +37,29 @@ end
   end
 end
 
+  section link_to "Leadership and Experience Awards", admin_leadership_experience_and_awards_path do
+  table_for LeadershipExperienceAndAward.all.each do
+    column :title do |entry|
+        link_to entry.title, edit_admin_leadership_experience_and_award_path(entry)
+      end
+  end
+end
+
+section link_to "Education", admin_educations_path do
+  table_for Education.all.each do
+    column :description do |entry|
+        link_to entry.description, edit_admin_education_path(entry)
+      end
+  end
+end
+
+section link_to "Professional Development", admin_professional_developments_path do
+  table_for ProfessionalDevelopment.all.each do
+    column :title do |entry|
+        link_to entry.title, edit_admin_professional_development_path(entry)
+      end
+  end
+end
 
   section "Recent Blogs" do
     table_for Blog.order("updated_at desc").limit(5) do

@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require bootstrap.min.js
 //= require custom.js
+//= require rich
 // = require turbolinks
 

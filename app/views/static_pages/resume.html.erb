@@ -1,12 +1,12 @@
 <%= provide(:title, "Resume") %>
 
-<nav id="navbar-resume-scrollspy" class="navbar-static hidden-xs">
+<!-- <nav id="navbar-resume-scrollspy" class="navbar-static hidden-xs">
   <div class="collapse navbar-collapse bs-js-navbar-scrollspy">
     <ul class="nav navbar-nav">
       <li><%= link_to("Top", "#top") %></li>
       <li><%= link_to("Summary", "#summary") %></li>
       <li><%= link_to("Professional Experience", "#professional_experience") %></li>
-            <li><%= link_to("Leadership Experience & Rewards", "#") %></li>
+            <li><%= link_to("Leadership Experience & Rewards", "#leadership_awards") %></li>
 
       <li><%= link_to("Education & Professional Development", "#") %></li>
 
@@ -14,9 +14,11 @@
 
     </ul>
   </div>
-</nav>
+</nav> -->
 
- <div class=" resume scrollspy-content" data-spy="scroll" data-target="#navbar-resume-scrollspy" data-offset="10">
+<!--  <div class=" resume scrollspy-content" data-spy="scroll" data-target="#navbar-resume-scrollspy" data-offset="10"> -->
+<div class="text-center download_resume"><%= link_to "Downlad MS Word Version:&nbsp; #{image_tag('word.png')}".html_safe,  @resume.document_url.to_s  %></div>
+<div class="resume">
 
 <div class="resume-header">
   <h2 id ="top" class="text-center"><%= @personal.name %></h2>
@@ -73,45 +75,114 @@
 <!-- end of summary section -->
 
 <!-- start of professional experience -->
-<h4 id="professional_experience" class="text-center underline">Professional Expereince</h4>
+<h4 id="professional_experience" class="text-center underline">PROFESSIONAL EXPERIENCE</h4>
 <% @professional_experience.each do |job| %>
-
-<!-- start of job header -->
-<div class="row resume_job_header">
-  <div class="col-md-8 col-xs-6">
-    <h5 class="text-left"><%= job.title %></h5>
+  <div class="job_container">
+  <!-- start of job header -->
+  <div class="row resume_job_header">
+    <div class="col-md-8 col-xs-6">
+      <h5 class="text-left"><%= job.title %></h5>
+    </div>
+    <div class="col-md-4 col-xs-6 text-left">
+    <h5><%= "#{job.job_start.strftime("%Y")} - #{job.job_end.strftime("%Y")}" %></h5>
+    </div>
   </div>
-  <div class="col-md-4 col-xs-6 text-left">
-  <h5><%= "#{job.job_start.strftime("%Y")} - #{job.job_end.strftime("%Y")}" %></h5>
-  </div>
-</div>
-<!-- end of job header -->
+  <!-- end of job header -->
 
-<!-- start of job summary -->
-<div class="row">
-  <div class="col-md-12 col-xs-12 text-left">
-    <%= simple_format(job.summary) %>
+  <!-- start of job summary -->
+  <div class="row">
+    <div class="col-md-12 col-xs-12 text-left">
+      <%= simple_format(job.summary) %>
+    </div>
   </div>
-</div>
-<!-- end of job summary -->
+  <!-- end of job summary -->
 
-<!-- start of bullet points -->
-<div class="row">
-  <div class="col-md-10 col-md-offset-1 col-xs-12">
-    <ul class="text-left">
-      <% [job.bullet_point_1, job.bullet_point_2, job.bullet_point_3, job.bullet_point_4, job.bullet_point_5].each do |x| %>
-        <% if !x.blank? %>
-          <li><%= x %></li>
+  <!-- start of bullet points -->
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1 col-xs-12">
+      <ul class="text-left">
+        <% [job.bullet_point_1, job.bullet_point_2, job.bullet_point_3, job.bullet_point_4, job.bullet_point_5].each do |x| %>
+          <% if !x.blank? %>
+            <li><%= x %></li>
+          <% end %>
         <% end %>
-      <% end %>
-    </ul>
+      </ul>
+    </div>
   </div>
+  <!-- end of bullet points -->
 </div>
-<!-- end of bullet points -->
+<!-- end of job container -->
 
 <% end %>
 <!-- end of professional experience -->
 
+<!-- start of leadership and experience awards -->
+<h4 id="leadership_awards" class="text-center underline">LEADERSHIP EXPERIENCE & AWARDS</h4>
+<% @leadership_awards.each do |entry| %>
+  <div class="award_container">
+    <div class="row">
+      <div class= "col-md-12 col-xs-12 text-left">
+        <strong><%= entry.title %></strong>&nbsp;
+        <%= entry.span %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-xs-12">
+        <ul class="text-left list-unstyled">
+          <% [entry.line1, entry.line2].each do |x| %>
+            <% if !x.blank? %>
+              <li><%= x %></li>
+            <% end %>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+<% end %>
+<!-- end of leadership and experience awards -->
+
+<!-- start of education and professional development -->
+<h4 id="education" class="text-center underline">EDUCATION & PROFESSIONAL DEVELOPMENT</h4>
+<div class="education_professional_development_container">
+  <% @education.each do |education| %>
+    <div class="row">
+      <div class="col-md-12 col-xs-12 text-left">
+        <%= simple_format(education.description) %>
+      </div>
+    </div>
+  <% end %>
+  <br />
+  <%   @development.each do |entry| %>
+    <div class = "row">
+      <div class= "col-xs-12 col-md-12 text-left">
+        <%= "#{entry.title}, #{entry.year.strftime("%Y")}" %>
+      </div>
+    </div>
+<% end %>
+</div>
+<!-- end of education and professional development -->
+
+<!-- start of community activities -->
+<h4 id="community_activities" class="text-center underline">COMMUNITY ACTIVITIES</h4>
+<div class ="community-activities wrapper">
+  <div class="row">
+    <div class="col-md-12 col-xs-12 text-left">
+      <% counter = 0 %>
+      <ul class="list-inline">
+        <% @activities.each do |activity| %>
+          <% if counter != 0  %>
+            &nbsp;&#42;&nbsp;
+          <% end %>
+          <li><%= activity.activity %></li>
+          <% counter += 1%>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<!-- end of community activities -->
 
 
 </div>
@@ -120,3 +191,4 @@
 
 </div>
 <!-- end of resume -->
+<div class="text-center download_resume"><%= link_to "Downlad MS Word Version:&nbsp; #{image_tag('word.png')}".html_safe,  @resume.document_url.to_s  %></div>

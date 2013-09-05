@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130903225641) do
+ActiveRecord::Schema.define(version: 20130905190817) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -53,10 +53,38 @@ ActiveRecord::Schema.define(version: 20130903225641) do
     t.datetime "updated_at"
   end
 
+  create_table "community_activities", force: true do |t|
+    t.string   "activity"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "educations", force: true do |t|
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "leadership_experience_and_awards", force: true do |t|
+    t.string   "title"
+    t.string   "span"
+    t.string   "line1"
+    t.string   "line2"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "professional_developments", force: true do |t|
+    t.string   "title"
+    t.date     "year"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "professional_experiences", force: true do |t|
     t.string   "title"
     t.date     "job_start"
-    t.date     "end"
+    t.date     "job_end"
     t.text     "summary"
     t.string   "bullet_point_1"
     t.string   "bullet_point_2"
@@ -77,6 +105,26 @@ ActiveRecord::Schema.define(version: 20130903225641) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "zip"
+  end
+
+  create_table "resumes", force: true do |t|
+    t.string   "document"
+    t.boolean  "active",     default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "rich_rich_files", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "rich_file_file_name"
+    t.string   "rich_file_content_type"
+    t.integer  "rich_file_file_size"
+    t.datetime "rich_file_updated_at"
+    t.string   "owner_type"
+    t.integer  "owner_id"
+    t.text     "uri_cache"
+    t.string   "simplified_type",        default: "file"
   end
 
   create_table "summary_bullet_points", force: true do |t|

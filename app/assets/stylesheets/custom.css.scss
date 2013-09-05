@@ -311,6 +311,16 @@ footer {
     }
 
 
+.download_resume { 
+
+  a {
+    color: black;
+      font-size: 20;
+  font-weight: 400;
+  font-family: 'Times New Roman';
+  margin-bottom: 1em;
+  }
+}
 @media(max-width: 768px){
     .summary_bullet_points > .col-xs-12 {
     text-align: center;
@@ -323,6 +333,9 @@ footer {
 }
 @media(max-width: 400px){
   .resume .resume-header {font-size: 14px !important;}
+      .summary_bullet_points > .col-xs-12 {
+    text-align: left;
+  }
 }
 nav#navbar-resume-scrollspy ul li {
   display: table-cell;
@@ -347,6 +360,9 @@ nav#navbar-resume-scrollspy ul li {
   background-color: darken(white, 2%);
   border: 1px solid darken(white, 3%);
   color: black;
+  h4 {
+    font-family: 'Times New Roman'
+  }
   
   hr {
     border-top: 3px solid black;
@@ -358,16 +374,18 @@ nav#navbar-resume-scrollspy ul li {
   }
   .resume-body {
     font-size: 14px;
+    margin-bottom: 1em;
+    p { margin-bottom: 0;}
   }
   .resume_job_header{
     h5 { 
       font-family: 'Times New Roman';
       font-weight: bold;
-      margin: 20px 0 0;
+      margin: 0;
     }
-    h5:first-child {
-      margin-top: 10px;
-    }
+  }
+  .job_container, .award_container {
+    margin-bottom: 20px;
   }
 }
 
