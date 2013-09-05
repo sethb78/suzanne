@@ -13,10 +13,8 @@ gem 'faker'
 group :production do
   gem 'pg', '0.15.1'
 end
-gem 'activeadmin', github: 'gregbell/active_admin', branch: 'rails4'
 gem 'devise'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -54,10 +52,12 @@ end
 # gem 'debugger', group: [:development, :test]
 gem 'rails_12factor'
 gem 'will_paginate', '~> 3.0.0'
-gem 'ransack'
 gem 'rich'
-gem 'formtastic'
 gem 'active_admin_editor'
 gem 'carrierwave'
-gem 'fog'
-
+gem "fog"
+gem 'ransack'
+gem 'activeadmin',         github: 'gregbell/active_admin', branch: 'rails4'
+gem 'inherited_resources', github: 'josevalim/inherited_resources'
+gem 'formtastic',          github: 'justinfrench/formtastic'
+gem 'sass-rails', '~> 4.0.0.rc2'
