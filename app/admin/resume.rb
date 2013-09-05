@@ -8,7 +8,7 @@ ActiveAdmin.register Resume do
 
   form do |f|
     f.inputs "Resume Upload" do
-      f.input :document
+      # f.input :document
       f.input :active
     end
     f.actions 
