@@ -78,8 +78,8 @@ Suzanne::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
   config.action_mailer.default_url_options = { :host => "www.suzannealtshuler.com" }
-  AWS_ACCESS_KEY_ID = ENV['AMAZON_KEY_ID']
-  AWS_SECRET_ACCESS_KEY = ENV['AMAZON_SECRET_KEY']
-  AWS_S3_BUCKET = ENV['AMAZON_BUCKET_NAME']
+  # AWS_ACCESS_KEY_ID = ENV['AMAZON_KEY_ID']
+  # AWS_SECRET_ACCESS_KEY = ENV['AMAZON_SECRET_KEY']
+  # AWS_S3_BUCKET = ENV['AMAZON_BUCKET_NAME']
   
 end
