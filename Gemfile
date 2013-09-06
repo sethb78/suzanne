@@ -53,6 +53,7 @@ end
 gem 'rails_12factor'
 gem 'will_paginate', '~> 3.0.0'
 gem 'rich'
+gem 'active_admin_editor'
 gem 'carrierwave'
 gem "fog"
 gem 'ransack'
@@ -60,3 +61,4 @@ gem 'activeadmin',         github: 'gregbell/active_admin', branch: 'rails4'
 gem 'inherited_resources', github: 'josevalim/inherited_resources'
 gem 'formtastic',          github: 'justinfrench/formtastic'
 gem 'sass-rails', '~> 4.0.0.rc2'
+gem 'protected_attributes'
