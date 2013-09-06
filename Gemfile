@@ -59,6 +59,7 @@ gem "fog"
 gem 'ransack'
 gem 'activeadmin',         github: 'gregbell/active_admin', branch: 'rails4'
 gem 'inherited_resources', github: 'josevalim/inherited_resources'
-gem 'formtastic',          github: 'justinfrench/formtastic'
+gem 'formtastic'
 gem 'sass-rails', '~> 4.0.0.rc2'
 gem 'protected_attributes'
+gem 'strong_parameters'
