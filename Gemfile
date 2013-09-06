@@ -53,7 +53,6 @@ end
 gem 'rails_12factor'
 gem 'will_paginate', '~> 3.0.0'
 gem 'rich'
-gem 'active_admin_editor'
 gem 'carrierwave'
 gem "fog"
 gem 'ransack'
