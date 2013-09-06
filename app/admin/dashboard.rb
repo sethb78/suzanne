@@ -51,6 +51,10 @@ ActiveAdmin.register_page "Dashboard" do
         strong link_to("Blogs Index", admin_blogs_path)
     end
   end
+
+  panel "Fun Facts" do
+    strong link_to("Fun Facts Index", admin_fun_facts_path)
+  end
     # Here is an example of a simple dashboard with columns and panels.
     #
     # columns do

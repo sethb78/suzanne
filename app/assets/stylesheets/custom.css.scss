@@ -177,36 +177,40 @@ iframe {
 aside {
   margin-top: 3em;
 // vertical accordion navs
-  .side_links .col-md-12{
+  .side_links  {
+    padding-right:0;
+    .col-md-12{
     margin-bottom: 1em;
-    padding-left: 0;
-    padding-right: 0;
-    .panel-body {
-      background: none #3e5657;
-      border-top: none;
-      ul {
-        margin-bottom: 0;
-        li a {
-          background: none lighten(#3e5657, 10%);
-          border-bottom: 1px solid #3e5657;
-          border-top: 1px solid darkgray;
+      padding-left: 0;
+      padding-right: 0;
+
+      .panel-body {
+        background: none #3e5657;
+        border-top: none;
+        ul {
+          margin-bottom: 0;
+          li a {
+            background: none lighten(#3e5657, 10%);
+            border-bottom: 1px solid #3e5657;
+            border-top: 1px solid darkgray;
+          }
+          li:first-child a { border-top: none}
+          li:last-child  a { border-bottom: none}
         }
-        li:first-child a { border-top: none}
-        li:last-child  a { border-bottom: none}
       }
-    }
-    a, ul li a {
-      font-family: 'Averia Serif Libre', cursive;  
-      font-size: 18px;
-      color: white;
-      padding: 10px 15px;
-      box-shadow: 3px 3px 3px #4A4A4A;
-      display: block;
-      background: none #3e5657;
-      &:hover, &:focus {
-        text-decoration: none;
-        background: darken(#3e5657, 15%);
-        outline: none;
+      a, ul li a {
+        font-family: 'Averia Serif Libre', cursive;  
+        font-size: 18px;
+        color: white;
+        padding: 10px 15px;
+        box-shadow: 3px 3px 3px #4A4A4A;
+        display: block;
+        background: none #3e5657;
+        &:hover, &:focus {
+          text-decoration: none;
+          background: darken(#3e5657, 15%);
+          outline: none;
+        }
       }
     }
   }
@@ -401,3 +405,37 @@ height: 300px;
     overflow: auto;
     position: relative;
   }
+
+
+
+// start of fun facts
+@media(min-width: 991px){
+  #fun_facts img { margin-top: 100px}
+}
+
+#fun_facts {
+  h2 { 
+    font-family: 'Rock Salt';
+    color: $dark-color;
+    text-shadow: 1px 1px 3px $light-color;
+  }
+  .counter {
+    font-family: 'Raleway';
+    font-weight: 600;
+    font-size: 26px;
+
+  }
+  img {
+    border-bottom: 10px solid plum;
+    border-radius: 25px 50px 25px 50px;
+    border-right: 10px solid plum;
+    margin: 0 auto;
+  }
+  ul {
+    padding-left: 1em;
+    li {
+        text-indent: -2.5em;
+    margin-left: 2.5em;
+  }
+}
+}

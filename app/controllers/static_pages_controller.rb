@@ -17,4 +17,8 @@ class StaticPagesController < ApplicationController
     @activities=CommunityActivity.all
     @resume = Resume.where(active: true).last
   end
+
+  def fun_facts
+    @fun_facts = FunFact.all
+  end
 end

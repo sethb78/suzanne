@@ -32,7 +32,7 @@
 
 
 
-                                                <li><a href="#">Link</a></li>
+      <li class="<%= 'active' if params[:action]== 'fun_facts' %>"><%= link_to("Fun Facts", fun_facts_path, class: "fun_facts_link") %></li>
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>

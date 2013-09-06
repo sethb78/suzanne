@@ -1,0 +1,20 @@
+<%= provide(:title, "Fun Facts") %>
+<div id="fun_facts">
+
+<h2>Fun Facts</h2>
+
+<div class="row">
+<div class="col-md-4 hidden-xs">
+<%= image_tag('suzanne_2.png', class: "img-responsive") %>
+</div>
+  <div class="col-md-8 col-xs-12">
+    <% counter = 1 %>
+    <ul class= "list-unstyled text-left">
+      <% @fun_facts.each do |fact| %>
+        <li><span class="counter"><%= counter %></span>&nbsp;&nbsp;<%= fact.fact %></li>
+        <% counter += 1 %>
+      <% end %>
+    </ul>
+  </div>
+</div>
+</div>

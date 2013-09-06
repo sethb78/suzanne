@@ -11,6 +11,7 @@
   <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,600,800' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Averia+Serif+Libre:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
   <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
   <script src="js/respond.js"></script>
 </head>
@@ -45,6 +46,8 @@
       <div class="col-md-4 col-sm-4 hidden-xs side_links">
         <% if params[:controller] == "static_pages" && params[:action] == "home" %>
           <%= render 'vertical_links' %>
+        <% else %>
+          <%= render 'layouts/sidebar' %>
         <% end %>
       </div>
     </aside>

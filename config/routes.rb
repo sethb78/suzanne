@@ -4,6 +4,7 @@ Suzanne::Application.routes.draw do
   resources :blogs
 get 'test', to: 'static_pages#test'
 get 'resume', to: 'static_pages#resume#top'
+get 'fun_facts', to: 'static_pages#fun_facts'
   root(to: 'static_pages#home')
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
