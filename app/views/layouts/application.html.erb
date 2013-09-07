@@ -42,15 +42,17 @@
       </div>
 
     <!-- Side Bar, displays link on desktop home page and .... -->
-    <aside>
-      <div class="col-md-4 col-sm-4 hidden-xs side_links">
-        <% if params[:controller] == "static_pages" && params[:action] == "home" %>
-          <%= render 'vertical_links' %>
-        <% else %>
-          <%= render 'layouts/sidebar' %>
-        <% end %>
-      </div>
-    </aside>
+    <% if params[:action] !="resume" %>
+      <aside>
+        <div class="col-md-4 col-sm-4 hidden-xs side_links">
+          <% if params[:controller] == "static_pages" && params[:action] == "home" %>
+            <%= render 'vertical_links' %>
+          <% else %>
+            <%= render 'layouts/sidebar' %>
+          <% end %>
+        </div>
+      </aside>
+    <% end %>
     <!-- End of side bar -->
   </div>
 </body>

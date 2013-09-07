@@ -43,6 +43,15 @@ ActiveAdmin.register_page "Dashboard" do
     end
   end
 
+  panel "Praise" do
+    ul do
+      Praise.all.each do |praise|
+        li link_to(praise.name, edit_admin_praise_path(praise))
+      end
+      strong link_to("Praise Index", admin_praises_path)
+    end
+  end
+
   panel "Blogs" do
     ul do
       Blog.all.each do |blog|

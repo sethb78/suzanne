@@ -5868,7 +5868,6 @@ td.visible-print {
 @media(max-width: 800px){
   header {
     .tagline { 
-      text-align: right;
       padding-right: .5em;
     }
   }
@@ -5915,13 +5914,14 @@ td.visible-print {
 
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   header {
     img.logo {
       max-height: 90px;
     }
     .tagline {
       font-size: .75em;
+      padding-left: 3em;
     }
   }
 }
@@ -5938,7 +5938,7 @@ td.visible-print {
   }
 }
 
-@media(min-width: 700px){
+@media(min-width: 1001px){
   header {
     .tagline {
       font-size: 2em;
@@ -5951,11 +5951,6 @@ td.visible-print {
 }
 
 @media(min-width: 950px){
-  header {
-    .tagline {
-      text-align: center
-    }
-  }
   .resume {
       padding: 3em 2em;
 
@@ -5969,5 +5964,6 @@ td.visible-print {
 }
 
 @media(max-width: 1000px){
-   .navbar-nav li a { font-size: 12px;}
+   .navbar-nav li a{ font-size: 12px;}
+   .tagline { font-size: 1.5em;}
 }

@@ -21,4 +21,8 @@ class StaticPagesController < ApplicationController
   def fun_facts
     @fun_facts = FunFact.all
   end
+
+  def praise
+    @praises = Praise.all
+  end
 end
