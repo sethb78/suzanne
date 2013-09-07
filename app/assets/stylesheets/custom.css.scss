@@ -445,3 +445,11 @@ height: 300px;
   }
 }
 }
+
+.praise {
+  blockquote {
+    div:first-child {
+      margin-bottom: .25em;
+    }
+  }
+}
