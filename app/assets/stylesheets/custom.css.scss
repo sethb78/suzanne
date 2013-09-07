@@ -280,6 +280,9 @@ aside {
       &:hover { text-decoration: none;
         background: transparent}
     }
+    .icon-2x {
+      font-size: 1.5em;
+    }
   }
     .email { @include three-dimensional_button($main-color: #c63d2d) }
     .facebook  { @include three-dimensional_button($main-color: #3B5998) }
