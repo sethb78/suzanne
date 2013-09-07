@@ -260,7 +260,33 @@ footer {
     .linkedin  { @include three-dimensional_button($main-color: #007bb6) }
   }
 }
+aside {
+  .contact_me_text {
+    font-family: 'Raleway';
+    font-size: 20px;
+    display: inline;
+    font-weight: bold
+  }
+  .side_links .social_links {
+    ul li {
+      width: auto;
+      margin-right:.1em;
+    }
+    a, ul li a {
+      padding: 0;
+      color: white;
+      background-color: transparent;
+      box-shadow: none;
+      &:hover { text-decoration: none;
+        background: transparent}
+    }
+  }
+    .email { @include three-dimensional_button($main-color: #c63d2d) }
+    .facebook  { @include three-dimensional_button($main-color: #3B5998) }
+    .twitter  { @include three-dimensional_button($main-color: #00ACED) }
+    .linkedin  { @include three-dimensional_button($main-color: #007bb6) }
 
+}
 
 .blog {
   margin-top: 1em;
