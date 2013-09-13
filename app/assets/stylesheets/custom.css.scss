@@ -71,11 +71,14 @@ header {
     margin: 0 auto;
   }
   .profile-photo {
-    border-radius: 20px 20px 0 0;
-    border-right: 1px inset black;
-    border-bottom: 1px inset black;
+
     margin-bottom: -2em;
     right: 20px;
+    background-color: white;
+    border: 5px double $dark-color;
+    transform:rotate(5deg);
+-ms-transform:rotate(5deg); /* IE 9 */
+-webkit-transform:rotate(5deg); /* Safari and Chrome */
   }
   img.logo {
     margin-top: -12px;
