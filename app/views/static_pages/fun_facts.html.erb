@@ -9,12 +9,15 @@
 </div>
   <div class="col-md-8 col-xs-12">
     <% counter = 1 %>
-    <ul class= "list-unstyled text-left">
+    <table>
       <% @fun_facts.each do |fact| %>
-        <li><span class="counter"><%= counter %></span>&nbsp;&nbsp;<%= fact.fact %></li>
+      <tr>
+        <td class="counter text-left"><%= counter %></td>
+        <td class="text-left"><%= simple_format(fact.fact) %></td>
+      </tr>
         <% counter += 1 %>
       <% end %>
-    </ul>
+    </table>
   </div>
 </div>
 </div>

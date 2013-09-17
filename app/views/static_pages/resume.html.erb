@@ -24,7 +24,9 @@
   <h2 id ="top" class="text-center"><%= @personal.name %></h2>
   <div class="row">
     <div class="col-md-12 col-xs-12 text-center resume-header">
+    <% if @personal.city.blank? || @personal.zip.blank? %>
     <%= "#{@personal.city}, #{@personal.zip}" %>&nbsp;&#42;&nbsp;
+    <% end %>
     <%= "Cell:  #{@personal.cell_phone}" %>&nbsp;&#42;&nbsp;
     <%= "Email:  #{@personal.email}" %>
     </div>

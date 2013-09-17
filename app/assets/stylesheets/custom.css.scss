@@ -76,9 +76,9 @@ header {
     right: 20px;
     background-color: white;
     border: 7px double $dark-color;
-    transform:rotate(5deg);
--ms-transform:rotate(5deg); /* IE 9 */
--webkit-transform:rotate(5deg); /* Safari and Chrome */
+    transform:rotate(-5deg);
+-ms-transform:rotate(-5deg); /* IE 9 */
+-webkit-transform:rotate(-5deg); /* Safari and Chrome */
   box-shadow: 1px 2px 4px black;
   }
   img.logo {
@@ -457,12 +457,7 @@ height: 300px;
     color: $dark-color;
     text-shadow: 1px 1px 3px $light-color;
   }
-  .counter {
-    font-family: 'Raleway';
-    font-weight: 600;
-    font-size: 26px;
 
-  }
   img {
     border-bottom: 10px solid plum;
     border-radius: 25px 50px 25px 50px;
@@ -470,13 +465,25 @@ height: 300px;
     margin-left: auto;
     margin-right: auto;
   }
-  ul {
-    padding-left: 1em;
-    li {
-        text-indent: -2.5em;
-    margin-left: 2.5em;
+  table {
+border-collapse:separate; 
+border-spacing: 0 .5em;
+    td {
+      vertical-align: middle
+    }
+    
+    .counter {
+    font-family: 'Raleway';
+    font-weight: 600;
+    font-size: 30px;
+    padding-right: .25em;
+    vertical-align: top;
+    line-height: 1;
   }
-}
+    p {
+      margin: 0;
+    }
+  }
 }
 
 .praise {
@@ -486,3 +493,4 @@ height: 300px;
     }
   }
 }
+
