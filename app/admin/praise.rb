@@ -12,6 +12,7 @@ ActiveAdmin.register Praise do
       f.input :content
       f.input :name
       f.input :position
+      f.input :photo_path
     end
     f.actions
   end
@@ -19,7 +20,7 @@ ActiveAdmin.register Praise do
 
 controller do
     def permitted_params
-      params.permit praise: [:content, :name, :position]
+      params.permit praise: [:content, :name, :position, :photo_path]
     end
   end
 end

@@ -24,7 +24,7 @@
   <h2 id ="top" class="text-center"><%= @personal.name %></h2>
   <div class="row">
     <div class="col-md-12 col-xs-12 text-center resume-header">
-    <% if !@personal.city.blank? && !@personal.zip.blank? %>
+    <% if !@personal.city.blank? && ! @personal.zip.blank? %>
     <%= "#{@personal.city}, #{@personal.zip}" %>&nbsp;&#42;&nbsp;
     <% end %>
     <%= "Cell:  #{@personal.cell_phone}" %>&nbsp;&#42;&nbsp;
@@ -65,7 +65,7 @@
         <% end %>
       </ul>
     </div>
-    <div class="col-xs-12 col-md-4">
+    <div class="col-xs-12 col-md-6">
       <ul>
         <% @summary_bullet_points[(@summary_bullet_points.count/2)..@summary_bullet_points.count].each do  |point| %>
           <li><%= point.feature %></li>

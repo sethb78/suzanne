@@ -9,11 +9,15 @@
         <div class="text-justify ">
           <%= "\"#{praise.content}\"" %>
         </div>
-        <div class="text-left ">
+
+        <div class="text-left <% if !praise.photo_path.blank? %> name_position <% end %>">
           <strong><%= "-#{praise.name}" %> </strong>
           <br />
           <strong><%= praise.position %></strong>
         </div>
+      <div class="pull-left">
+      <%= image_tag(praise.photo_path) %>
+      </div>
       </blockquote>
       <% end %>
   </div>
