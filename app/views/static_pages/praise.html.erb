@@ -15,9 +15,11 @@
           <br />
           <strong><%= praise.position %></strong>
         </div>
-      <div class="pull-left">
-      <%= image_tag(praise.photo_path) %>
-      </div>
+      <% if !praise.photo_path.blank? %>
+        <div class="pull-left">
+        <%= image_tag(praise.photo_path) %>
+        </div>
+      <% end %>
       </blockquote>
       <% end %>
   </div>
