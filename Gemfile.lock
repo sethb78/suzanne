@@ -114,6 +114,8 @@ GEM
       jquery-rails
       railties (>= 3.1.0)
     json (1.8.0)
+    jwplayer-rails (1.0.1)
+      railties (>= 3.1.1)
     kaminari (0.14.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -212,6 +214,7 @@ DEPENDENCIES
   inherited_resources!
   jbuilder (~> 1.2)
   jquery-rails
+  jwplayer-rails
   pg (= 0.15.1)
   rails (= 4.0.0)
   rails_12factor
