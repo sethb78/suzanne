@@ -23,6 +23,6 @@ class StaticPagesController < ApplicationController
   end
 
   def praise
-    @praises = Praise.all
+    @praises = Praise.order("id DESC")
   end
 end
