@@ -522,7 +522,8 @@ border-spacing: 0 .5em;
 
 .home_video {
   video {
-    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
   
   }
 }
