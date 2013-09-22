@@ -1,9 +1,13 @@
 <!-- Video -->
 <div class="row">
-  <div class="col-md-12 col-xs-12">
-<!--     <iframe width="560" height="315" src="//www.youtube.com/embed/-pk_5uAsumY?rel=0" frameborder="0" allowfullscreen></iframe>
- -->
-<%= video_tag(["intro.webm"], :size => "560x315", :controls => true, :autobuffer => true) %>
+  <div class="col-md-12 col-xs-12 home_video">
+
+<video id="video" controls='controls'>
+    <source src="/videos/intro.m4v" type="video/mp4"/>
+    <source src="/videos/intro2.ogv" type="video/ogg"/>
+    <source src="/videos/intro.webm" type="video/webm"/>
+    Your browser doesn't seems to support video tag
+</video> 
     </div>
 </div>
 
