@@ -1,71 +1,74 @@
 <!DOCTYPE html>
-<html>
+  <html>
 
-<head>
-  <title><%= full_title(yield(:title)) %></title>
-  <%= favicon_link_tag '/favicon2.ico' %>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag 'swfobject' %>
-  <%= csrf_meta_tags %>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+      <title><%= full_title(yield(:title)) %></title>
+      <%= favicon_link_tag '/favicon2.ico' %>
+      <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+      <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+      <%= javascript_include_tag 'swfobject' %>
+      <%= csrf_meta_tags %>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-  <link href='http://fonts.googleapis.com/css?family=Raleway:400,600,800' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Averia+Serif+Libre:400,700' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
-  <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-  <script src="js/respond.js"></script>
-</head>
+      <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+      <link href='http://fonts.googleapis.com/css?family=Raleway:400,600,800' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Averia+Serif+Libre:400,700' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+      <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+      <script src="js/respond.js"></script>
+    </head>
 
-<!-- main content:  header, navbar, body, footer -->
-<div class="main-container-wrapper container">
 
-<header>
-  <%= render 'layouts/banner' %>
-</header>
-
-<!-- display horizontal navbar on small screens and non home page -->
-<% if params[:controller] != "static_pages" || params[:action] != "home" %>
-  <%= render 'layouts/navbar' %>
-<% else %>
-  <div class="visible-xs">
-    <%= render 'layouts/navbar' %>
-  </div>
-<% end %>
-<!-- End of horizontal navbar  -->
-
-<!-- main content and side bar -->
 <body>
-  <div class="main-content">
-    <div class="row">
-      <div class="<% if params[:action]=="resume" %> col-md-12 col-sm-12 <% else %>col-md-8 col-sm-8 <% end %>col-xs-12 text-center">
-        <%= yield %>
-      </div>
+  <div class="body-texture">
+    <!-- main content:  header, navbar, body, footer -->
+      <div class="main-container-wrapper container">
+        <header>
+          <%= render 'layouts/banner' %>
+        </header>
 
-    <!-- Side Bar, displays link on desktop home page and .... -->
-    <% if params[:action] !="resume" %>
-      <aside>
-        <div class="col-md-4 col-sm-4 hidden-xs side_links">
-          <%= render 'layouts/contact_bar' %>
-          <% if params[:controller] == "static_pages" && params[:action] == "home" %>
-            <%= render 'vertical_links' %>
+        <!-- display horizontal navbar on small screens and non home page -->
+          <% if params[:controller] != "static_pages" || params[:action] != "home" %>
+            <%= render 'layouts/navbar' %>
           <% else %>
-            <%= render 'layouts/sidebar' %>
+            <div class="visible-xs">
+              <%= render 'layouts/navbar' %>
+            </div>
           <% end %>
-        </div>
-      </aside>
-    <% end %>
-    <!-- End of side bar -->
+        <!-- End of horizontal navbar  -->
+
+        <!-- main content and side bar -->
+          <div class="main-content">
+            <div class="row">
+              <div class="<% if params[:action]=="resume" %> col-md-12 col-sm-12 <% else %>col-md-8 col-sm-8 <% end %>col-xs-12 text-center">
+                <%= yield %>
+              </div>
+
+            <!-- Side Bar, displays link on desktop home page and .... -->
+            <% if params[:action] !="resume" %>
+              <aside>
+                <div class="col-md-4 col-sm-4 hidden-xs side_links">
+                  <%= render 'layouts/contact_bar' %>
+                  <% if params[:controller] == "static_pages" && params[:action] == "home" %>
+                    <%= render 'vertical_links' %>
+                  <% else %>
+                    <%= render 'layouts/sidebar' %>
+                  <% end %>
+                </div>
+              </aside>
+            <% end %>
+            <!-- End of side bar -->
+          </div>
+        <!-- end of main content and side bar -->
+
+        <footer>
+          <%= render 'layouts/footer' %>
+        </footer>
+
+      </div>
+    <!-- end of main content wrapper -->
+  
   </div>
 </body>
-<!-- end of main content and side bar -->
-
-<footer>
-  <%= render 'layouts/footer' %>
-</footer>
-
-</div>
-<!-- end of main content wrapper -->
 
 </html>

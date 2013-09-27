@@ -46,6 +46,9 @@ body {
   background-image: -webkit-gradient(linear, left bottom, left bottom, color-stop(50, #F5F5F5), color-stop(1, #A1DBE3));
   background-image: -webkit-linear-gradient(bottom, #F5F5F5 50%, #A1DBE3 100%);
   background-image: linear-gradient(bottom top, #F5F5F5 50%, #A1DBE3 100%);
+  .body-texture {
+    background-image: url('texture5.png');
+  }
 }
 
 .main-container-wrapper {
@@ -96,6 +99,7 @@ header {
     text-align:center;
     background: #ffffff; /* Old browsers */
     @include light-blue-gradient;
+      text-shadow: 0 -1px black, -1px 0 black, 0 1px whitesmoke;
     }
 }
 // end of header
@@ -309,14 +313,14 @@ aside {
 }
 
 .blog {
-  margin-top: 1em;
   p {
     text-align: left;
   }
   h3 {
-    margin-bottom: 0;
+    margin-bottom: 8px;
+    font-family: 'Raleway' sans-serif;
   }
-  h5 {
+  h5, h3 {
     margin-top: 0;
   }
 }
