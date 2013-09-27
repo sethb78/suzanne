@@ -52,13 +52,13 @@ body {
 .main-container-wrapper {
   box-shadow: 0 0 10px $dark-color;
   min-height: 100%;
-  background-image: -ms-linear-gradient(bottom right, #FFFFFF 75%, #A1DBE3 100%);
-  background-image: -moz-linear-gradient(bottom right, #FFFFFF 75%, #A1DBE3 100%);
-  background-image: -o-linear-gradient(bottom right, #FFFFFF 75%, #A1DBE3 100%);
-  background-image: -webkit-gradient(linear, right bottom, left top, color-stop(.75, #FFFFFF), color-stop(1, #A1DBE3));background-image: -webkit-linear-gradient(bottom right, #FFFFFF 75%, #A1DBE3 100%);
-  background-image: linear-gradient(to top left, #FFFFFF 75%, #A1DBE3 100%);
-}
-
+  background-image: url(texture5.png),-ms-linear-gradient(bottom right, #FFFFFF 75%, #A1DBE3 100%);
+  background: url(texture5.png),-moz-linear-gradient(bottom right, #FFFFFF 75%, #A1DBE3 100%);
+  background-image: url(texture5.png),-o-linear-gradient(bottom right, #FFFFFF 75%, #A1DBE3 100%);
+  background-image: url(texture5.png),-webkit-gradient(linear, right bottom, left top, color-stop(.75, #FFFFFF), color-stop(1, #A1DBE3));background-image: -webkit-linear-gradient(bottom right, #FFFFFF 75%, #A1DBE3 100%);
+  background-image: url(texture5.png),linear-gradient(to top left, #FFFFFF 75%, #A1DBE3 100%);
+    background-size: cover;
+  }
 // header
 header {
   padding-top: 10px;
