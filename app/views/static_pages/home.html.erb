@@ -13,7 +13,8 @@
 
 <!-- Blog -->
 <div class="row blog">
-  <div class="col-md-10 col-md-offset-1 col-xs-12 ">
+<%= image_tag(texture5.png) %>
+<div class="col-md-10 col-md-offset-1 col-xs-12">
     <h3 class="text-center"><strong><%= @current_blog.title%></strong></h3>
     <%= simple_format(@current_blog.content) %>
   </div>
