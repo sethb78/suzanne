@@ -40,12 +40,12 @@ blockquote { border: none;}
 body {
   background-repeat: no-repeat;
   opacity: 1;
-  background-image: url('texture5.png'), -ms-linear-gradient(bottom, #F5F5F5 50%, #A1DBE3 100%);
-  background-image: url('texture5.png'), -moz-linear-gradient(bottom, #F5F5F5 50%, #A1DBE3 100%);
-  background-image: url('texture5.png'), -o-linear-gradient(bottom, #F5F5F5 50%, #A1DBE3 100%);
-  background-image: url('texture5.png'), -webkit-gradient(linear, left bottom, left bottom, color-stop(50, #F5F5F5), color-stop(1, #A1DBE3));
-  background-image: url('texture5.png'), -webkit-linear-gradient(bottom, #F5F5F5 50%, #A1DBE3 100%);
-  background-image: url('texture5.png'), linear-gradient(bottom top, #F5F5F5 50%, #A1DBE3 100%);
+  background-image:url(texture5.png),-ms-linear-gradient(bottom, #F5F5F5 50%, #A1DBE3 100%);
+  background-image:url(texture5.png),-moz-linear-gradient(bottom, #F5F5F5 50%, #A1DBE3 100%);
+  background-image:url(texture5.png),-o-linear-gradient(bottom, #F5F5F5 50%, #A1DBE3 100%);
+  background-image:url(texture5.png),-webkit-gradient(linear, left bottom, left bottom, color-stop(50, #F5F5F5), color-stop(1, #A1DBE3));
+  background-image:url(texture5.png),-webkit-linear-gradient(bottom, #F5F5F5 50%, #A1DBE3 100%);
+  background-image:url(texture5.png),linear-gradient(bottom top, #F5F5F5 50%, #A1DBE3 100%);
   background-size: cover;
 
 }
