@@ -466,11 +466,7 @@ height: 300px;
 }
 
 #fun_facts {
-  h2 { 
-    font-family: 'Rock Salt';
-    color: $dark-color;
-    text-shadow: 1px 1px 3px $light-color;
-  }
+
 
   img {
     border-bottom: 10px solid plum;
@@ -501,9 +497,15 @@ border-spacing: 0 .5em;
 }
 
 .praise {
+  clear: both;
   blockquote {
     div:first-child {
       margin-bottom: .25em;
+    }
+    .praise_content {
+      font-family: "Nothing You Could Do";
+      font-size: 16px;
+      font-weight: bold;
     }
   }
   img {
@@ -530,3 +532,48 @@ border-spacing: 0 .5em;
   
   }
 }
+
+.page_title {
+   box-shadow: 1px 2px 4px black;
+    display: block;
+    font-family: "Raleway";
+    font-size: 36px;
+      text-shadow: 0 0, 0 0, 0 1px $light-color;
+    transform: rotate(-5deg);
+    font-weight: bold;
+    margin-top: 1em;
+    margin-left: -40px;
+    background-color: whitesmoke;
+    position: relative;-ms-transform:rotate(-5deg); /* IE 9 */
+-webkit-transform:rotate(-5deg); 
+}
+  .fun_facts_page_title { 
+    font-family: 'Rock Salt';
+    color: $dark-color;
+    text-shadow: 1px 1px 3px $light-color;
+    box-shadow: 1px 2px 4px black;
+    display: block;
+    font-size: 36px;
+    transform: rotate(-5deg);
+    font-weight: bold;
+    margin-top: 1em;
+    margin-left: -40px;
+    background-color: whitesmoke;
+    position: relative;-ms-transform:rotate(-5deg); /* IE 9 */
+-webkit-transform:rotate(-5deg); 
+  }
+
+  .arrow {
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border-left: 23px solid transparent;
+    border-top: 10px solid black;
+        transform: rotate(5deg);
+  -ms-transform:rotate(5deg); /* IE 9 */
+-webkit-transform:rotate(5deg); 
+  top: 100%;
+  left: 0;
+  position: absolute;
+  opacity: .8
+  }
