@@ -536,6 +536,13 @@ border-spacing: 0 .5em;
 @media(min-width: 1024px){
   .page_title, .fun_facts_page_title {
     margin-left: -40px;
+     transform: rotate(-5deg);
+    position: relative;-ms-transform:rotate(-5deg); /* IE 9 */
+    -webkit-transform:rotate(-5deg); 
+   box-shadow: 1px 2px 4px black;
+    display: block;
+    text-shadow: 0 0, 0 0, 0 1px $light-color;
+    background-color: whitesmoke;
   }
     .arrow {
     width: 0;
@@ -550,31 +557,16 @@ border-spacing: 0 .5em;
   opacity: .8
   }
 }
-.page_title {
-   box-shadow: 1px 2px 4px black;
-    display: block;
+.page_title, .fun_facts_page_title {
     font-family: "Raleway";
     font-size: 36px;
-      text-shadow: 0 0, 0 0, 0 1px $light-color;
-    transform: rotate(-5deg);
     font-weight: bold;
     margin-top: 1em;
-    background-color: whitesmoke;
-    position: relative;-ms-transform:rotate(-5deg); /* IE 9 */
--webkit-transform:rotate(-5deg); 
+
 }
   .fun_facts_page_title { 
-    font-family: 'Rock Salt';
+    font-family: 'Rock Salt' !important;
     color: $dark-color;
     text-shadow: 1px 1px 3px $light-color;
-    box-shadow: 1px 2px 4px black;
-    display: block;
-    font-size: 36px;
-    transform: rotate(-5deg);
-    font-weight: bold;
-    margin-top: 1em;
-    background-color: whitesmoke;
-    position: relative;-ms-transform:rotate(-5deg); /* IE 9 */
--webkit-transform:rotate(-5deg); 
   }
 
