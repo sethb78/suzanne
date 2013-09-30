@@ -4,7 +4,7 @@
     <head>
       <title><%= full_title(yield(:title)) %></title>
       <%= favicon_link_tag '/favicon2.ico' %>
-      <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+      <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
       <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
       <%= javascript_include_tag 'swfobject' %>
       <%= csrf_meta_tags %>
@@ -12,12 +12,17 @@
 
       <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
       <link href='http://fonts.googleapis.com/css?family=Rock+Salt|Averia+Seric+Libre|Raleway|Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
-      <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+
+          <!--[if IE]>
+<style>
+.arrow { top: 100%; }
+</style>
+<![endif]-->
+
+   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
       <script src="js/respond.js"></script>
-          <!--[if IE]>  
-        <style>  
-            .arrow { top: 100%; }  
-        </style>  
     <![endif]-->
     </head>
 
@@ -39,14 +44,16 @@
           <% end %>
         <!-- End of horizontal navbar  -->
 
-        <!-- main content and side bar -->
-            <div class="row">
-              <div class="col-xs-8 col-md-4">
-                <div class="text-center<% if params[:action] == "fun_facts"%> fun_facts_page_title <%else %> page_title<% end %>"><%= yield(:title) %><% if !yield(:title).blank? %><span class="arrow"></span><% end %></div>
-              </div>
+        <!-- 3d fold title tab only visible on desktop -->
+          <div class="row ">
+            <div class="visible-lg col-md-4">
+              <div class="text-center<% if params[:action] == "fun_facts"%> fun_facts_page_title <%else %> page_title<% end %>"><%= yield(:title) %><% if !yield(:title).blank? %><span class="arrow"></span><% end %></div>
             </div>
-                      <div class="main-content">
-
+          </div>
+        <!-- end of 3d fold title tab -->
+               
+        <!-- main content and side bar -->
+          <div class="main-content">
             <div class="row">
               <div class="<% if params[:action]=="resume" %> col-md-12 col-sm-12 <% else %>col-md-8 col-sm-8 <% end %>col-xs-12 text-center">
                 <%= yield %>

@@ -28,12 +28,17 @@ blockquote { border: none;}
   border-radius: 5px;
   background-image: -webkit-linear-gradient(top, lighten($main_color, 15%), darken($main-color, 15%));
   box-shadow:0px 5px 0px darken($main_color, 30%), 0px 8px 5px rgba(0,0,0,0.3);
+  -webkit-box-shadow:0px 5px 0px darken($main_color, 30%), 0px 8px 5px rgba(0,0,0,0.3);
+  -moz-box-shadow:0px 5px 0px darken($main_color, 30%), 0px 8px 5px rgba(0,0,0,0.3);
   color: whitesmoke;
   text-align: center;
   &:hover {
     top: 3px;
     background-color: darken($main_color, 15%);
     box-shadow:0px 2px 0px darken($main_color, 30%), 0px 4px 3px rgba(0,0,0,0.3);
+    -moz-box-shadow:0px 2px 0px darken($main_color, 30%), 0px 4px 3px rgba(0,0,0,0.3);
+    -webkit-box-shadow:0px 2px 0px darken($main_color, 30%), 0px 4px 3px rgba(0,0,0,0.3);
+
   }
 }
 
@@ -51,6 +56,8 @@ body {
 
 .main-container-wrapper {
   box-shadow: 0 0 10px $dark-color;
+  -moz-box-shadow: 0 0 10px $dark-color;
+  -webkit-box-shadow: 0 0 10px $dark-color;
   min-height: 100%;
   background-image: url(texture5.png),-ms-linear-gradient(bottom right, #FFFFFF 75%, #A1DBE3 100%);
   background: url(texture5.png),-moz-linear-gradient(bottom right, #FFFFFF 75%, #A1DBE3 100%);
@@ -80,6 +87,9 @@ header {
 -ms-transform:rotate(-5deg); /* IE 9 */
 -webkit-transform:rotate(-5deg); /* Safari and Chrome */
   box-shadow: 1px 2px 4px black;
+    -moz-box-shadow: 1px 2px 4px black;
+  -webkit-box-shadow: 1px 2px 4px black;
+
   }
   img.logo {
     height: 100%;
@@ -88,6 +98,8 @@ header {
   .tagline {
     clear: both;
     box-shadow: 0 1px 2px grey;
+    -webkit-box-shadow: 0 1px 2px grey;
+    -moz-box-shadow: 0 1px 2px grey;
     font-weight: 600;
     line-height: 1.5em;
     padding-bottom: 2px;
@@ -132,6 +144,8 @@ header {
       border-right: 1px solid #334141;
       a {
         box-shadow: 3px 3px 3px #4A4A4A;
+        -webkit-box-shadow: 3px 3px 3px #4A4A4A;
+        -moz-box-shadow: 3px 3px 3px #4A4A4A;
         padding-top: 8px;
         padding-bottom: 8px;
         color: whitesmoke;
@@ -213,6 +227,8 @@ aside {
         color: white;
         padding: 10px 15px;
         box-shadow: 3px 3px 3px #4A4A4A;
+        -webkit-box-shadow: 3px 3px 3px #4A4A4A;
+        -moz-box-shadow: 3px 3px 3px #4A4A4A;
         display: block;
         background: none #3e5657;
         &:hover, &:focus {
@@ -424,6 +440,8 @@ nav#navbar-resume-scrollspy ul li {
     border-top: 3px solid black;
     width: 75%;
     box-shadow: 1px 1px 1px grey;
+    -webkit-box-shadow: 1px 1px 1px grey;
+    -moz-box-shadow: 1px 1px 1px grey;
   }
   .resume-header {
     font-size: 16px;
@@ -540,6 +558,8 @@ border-spacing: 0 .5em;
     position: relative;-ms-transform:rotate(-5deg); /* IE 9 */
     -webkit-transform:rotate(-5deg); 
    box-shadow: 1px 2px 4px black;
+   -moz-box-shadow: 1px 2px 4px black;
+   -webkit-box-shadow: 1px 2px 4px black;
     display: block;
     text-shadow: 0 0, 0 0, 0 1px $light-color;
     background-color: whitesmoke;
