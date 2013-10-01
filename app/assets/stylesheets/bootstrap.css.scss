@@ -3135,7 +3135,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   display: block;
 }
 ul.dropdown-menu > li > a, .nav > li > a {
-  font-family: 'Averia Serif Libre', cursive;  
+  font-family: 'Averia Serif Libre', sans-serif;  
 }
 .nav > li > a {
   position: relative;
@@ -3670,13 +3670,14 @@ ul.dropdown-menu > li > a, .nav > li > a {
 .navbar-default .navbar-nav > .active > a:focus,
 aside .side_links .col-md-12 .active > a, 
 aside .side_links .col-md-12 ul li .active >a{
- background: -moz-linear-gradient(top,  rgba(161,219,227,0.75) 0%, rgba(161,219,227,0.76) 1%, rgba(161,219,227,1) 50%); /* FF3.6+ */
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(161,219,227,0.75)), color-stop(1%,rgba(161,219,227,0.76)), color-stop(50%,rgba(161,219,227,1))); /* Chrome,Safari4+ */
-      background: -webkit-linear-gradient(top,  rgba(161,219,227,0.75) 0%,rgba(161,219,227,0.76) 1%,rgba(161,219,227,1) 50%); /* Chrome10+,Safari5.1+ */
-      background: -o-linear-gradient(top,  rgba(161,219,227,0.75) 0%,rgba(161,219,227,0.76) 1%,rgba(161,219,227,1) 50%); /* Opera 11.10+ */
-      background: -ms-linear-gradient(top,  rgba(161,219,227,0.75) 0%,rgba(161,219,227,0.76) 1%,rgba(161,219,227,1) 50%); /* IE10+ */
-      background: linear-gradient(to bottom,  rgba(161,219,227,0.75) 0%,rgba(161,219,227,0.76) 1%,rgba(161,219,227,1) 50%); /* W3C */
+ background-image: -moz-linear-gradient(top,  rgba(161,219,227,0.75) 0%, rgba(161,219,227,0.76) 1%, rgba(161,219,227,1) 50%); /* FF3.6+ */
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(161,219,227,0.75)), color-stop(1%,rgba(161,219,227,0.76)), color-stop(50%,rgba(161,219,227,1))); /* Chrome,Safari4+ */
+      background-image: -webkit-linear-gradient(top,  rgba(161,219,227,0.75) 0%,rgba(161,219,227,0.76) 1%,rgba(161,219,227,1) 50%); /* Chrome10+,Safari5.1+ */
+      background-image: -o-linear-gradient(top,  rgba(161,219,227,0.75) 0%,rgba(161,219,227,0.76) 1%,rgba(161,219,227,1) 50%); /* Opera 11.10+ */
+      background-image: -ms-linear-gradient(top,  rgba(161,219,227,0.75) 0%,rgba(161,219,227,0.76) 1%,rgba(161,219,227,1) 50%); /* IE10+ */
+      background-image: linear-gradient(to bottom,  rgba(161,219,227,0.75) 0%,rgba(161,219,227,0.76) 1%,rgba(161,219,227,1) 50%); /* W3C */
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#334141', endColorstr='#334141',GradientType=0 ); /* IE6-9 */
+  background-color: #3E5657;
 }
 .navbar-default .navbar-nav > .active > a,
 aside .side_links .col-md-12 .active > a, 
