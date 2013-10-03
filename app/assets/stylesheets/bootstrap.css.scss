@@ -5384,7 +5384,10 @@ td.visible-xs {
       margin-top: 6em;
   }
   .blog {
-    margin-top: calc(6em + 20px)
+    margin-top: 2.25em;
+  }
+  .navbar-default {
+    margin-top: 1%;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -5903,6 +5906,8 @@ td.visible-print {
 }
 @media(max-width: 767px){
   .navbar-default {
+      background: none #A1DBE3;
+      z-index:0;
       .navbar-collapse {
       padding-left: 0;
       padding-right: 0;
@@ -5922,6 +5927,9 @@ td.visible-print {
       text-align: center !important;
      }
   }
+  .tagline {
+    border-bottom: 1px solid #3E5657;
+  }
     footer {
 
     .social_links {
@@ -5932,7 +5940,7 @@ td.visible-print {
     margin-top: 1em;
   }
   .blog {
-    margin-top: calc(1em + 20px)
+    margin-top: calc(2.25em)
   }
 
 }

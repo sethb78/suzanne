@@ -18,14 +18,14 @@ $light-color: #A1DBE3;
 .no-margin { margin: 0 }
 .underline {text-decoration: underline}
 .text-justify {text-align: justify}
-.indent-right {padding-right: 2em;}
+.indent-right {padding-right: 3.07%;}
 blockquote { border: none;}
 
 @mixin three_dimensional_button($main_color: #274663) {
   position:relative;
   background-color: $main_color;
   border: 0;
-  border-radius: 5px;
+  border-radius: 4px;
   background-image: -webkit-linear-gradient(top, lighten($main_color, 15%), darken($main-color, 15%));
   box-shadow:0px 5px 0px darken($main_color, 30%), 0px 8px 5px rgba(0,0,0,0.3);
   -webkit-box-shadow:0px 5px 0px darken($main_color, 30%), 0px 8px 5px rgba(0,0,0,0.3);
@@ -53,17 +53,19 @@ body {
   background-size: cover;
 
 }
-
+video {
+  border-radius: 4px;
+}
 .main-container-wrapper {
   box-shadow: 0 0 10px $dark-color;
   -moz-box-shadow: 0 0 10px $dark-color;
   -webkit-box-shadow: 0 0 10px $dark-color;
   min-height: 100%;
-  background-image: url(texture5.png),-ms-linear-gradient(bottom right, #FFFFFF 75%, #A1DBE3 100%);
-  background: url(texture5.png),-moz-linear-gradient(bottom right, #FFFFFF 75%, #A1DBE3 100%);
-  background-image: url(texture5.png),-o-linear-gradient(bottom right, #FFFFFF 75%, #A1DBE3 100%);
-  background-image: url(texture5.png),-webkit-gradient(linear, right bottom, left top, color-stop(.75, #FFFFFF), color-stop(1, #A1DBE3));background-image: -webkit-linear-gradient(bottom right, #FFFFFF 75%, #A1DBE3 100%);
-  background-image: url(texture5.png),linear-gradient(to top left, #FFFFFF 75%, #A1DBE3 100%);
+  background-image: -ms-linear-gradient(bottom right, #FFFFFF 75%, #A1DBE3 100%);
+  background: -moz-linear-gradient(bottom right, #FFFFFF 75%, #A1DBE3 100%);
+  background-image: -o-linear-gradient(bottom right, #FFFFFF 75%, #A1DBE3 100%);
+  background-image: -webkit-gradient(linear, right bottom, left top, color-stop(.75, #FFFFFF), color-stop(1, #A1DBE3));background-image: -webkit-linear-gradient(bottom right, #FFFFFF 75%, #A1DBE3 100%);
+  background-image: linear-gradient(to top left, #FFFFFF 75%, #A1DBE3 100%);
     background-size: cover;
   }
 // header
@@ -76,24 +78,44 @@ header {
     z-index: 1;
     position: relative;
     margin: 0 auto;
+
+      border: 3px solid white;
   }
   .profile-photo {
-
+    border: none;
     margin-bottom: -2em;
     right: 20px;
-    background-color: white;
-    border: 7px double $dark-color;
+    background-color: whitesmoke;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    border-radius: 4px;
     transform:rotate(-5deg);
 -ms-transform:rotate(-5deg); /* IE 9 */
 -webkit-transform:rotate(-5deg); /* Safari and Chrome */
-  box-shadow: 1px 2px 4px black;
-    -moz-box-shadow: 1px 2px 4px black;
-  -webkit-box-shadow: 1px 2px 4px black;
-
+  box-shadow: inset 1px 2px 3px  $dark-color;
+    -moz-box-shadow: inset 1px 2px 3px $dark-color;
+  -webkit-box-shadow: inset 1px 2px 3px  $dark-color;
   }
+  .right-profile-photo {
+    border: none;
+    margin-bottom: -2em;
+    left: 20px;
+    background-color: whitesmoke;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    border-radius: 4px;
+    transform:rotate(5deg);
+-ms-transform:rotate(5deg); /* IE 9 */
+-webkit-transform:rotate(5deg); /* Safari and Chrome */
+  box-shadow: inset -1px 2px 3px  $dark-color;
+    -moz-box-shadow: inset 1px 2px 3px $dark-color;
+  -webkit-box-shadow: inset 1px 2px 3px  $dark-color;
+  }
+
   img.logo {
     height: 100%;
     width: auto;
+    border: none;
   }
   .tagline {
     clear: both;
@@ -116,10 +138,9 @@ header {
 
 // horizontal navbar
 .navbar-default {
-  margin-top: .5em;
   margin-left: -15px;
   margin-right: -15px;
-  background: none #3e5657;
+  // background: none #3e5657;
   text-align: center;
   .navbar-nav {
     width: 50%;
@@ -143,13 +164,15 @@ header {
       border-left: 1px solid #334141;
       border-top: 1px solid #334141;
       border-right: 1px solid #334141;
+      border-radius: 4px;
       a {
-        box-shadow: 3px 3px 3px #4A4A4A;
-        -webkit-box-shadow: 3px 3px 3px #4A4A4A;
-        -moz-box-shadow: 3px 3px 3px #4A4A4A;
+        box-shadow: inset 1px 1px 1px #4A4A4A;
+        -webkit-box-shadow: 1px 1px 1px #4A4A4A;
+        -moz-box-shadow: 1px 1px 1px #4A4A4A;
         padding-top: 8px;
         padding-bottom: 8px;
         color: whitesmoke;
+        border-radius: 4px;
       }
     }
     li.active {
@@ -192,7 +215,7 @@ header {
 
 iframe {
   border: 10px solid black;
-  margin-left: 2px;
+  margin-left: .2%;
   max-width: 100%;
 }
 
@@ -223,13 +246,13 @@ aside {
         }
       }
       a, ul li a {
-        font-family: 'Averia Serif Libre', cursive;  
-        font-size: 18px;
+        font-family: 'Averia Serif Libre', sans-serif;  
+        font-size: 1.125em;
         color: white;
-        padding: 10px 15px;
-        box-shadow: 3px 3px 3px #4A4A4A;
-        -webkit-box-shadow: 3px 3px 3px #4A4A4A;
-        -moz-box-shadow: 3px 3px 3px #4A4A4A;
+        padding: 10px 4%;
+        box-shadow: inset 1px 1px 1px #4A4A4A;
+        -webkit-box-shadow: 1px 1px 1px #4A4A4A;
+        -moz-box-shadow: 1px 1px 1px #4A4A4A;
         display: block;
         background: none #3e5657;
         &:hover, &:focus {
@@ -249,27 +272,31 @@ aside {
 
 
 footer {
-  margin-top: 3em;
+  margin-top: 2%;
   background: none #3e5657;
   color: whitesmoke;
   padding: .5em 0;
   margin-left: -15px;
   margin-right: -15px;
+  border-radius: 4px 4px 0 0;
+  box-shadow: 0 -1px 2px #808080;
+  -webkit-box-shadow: 0 -1px 2px #4A4A4A;
+  -moz-box-shadow: 0 -1px 2px #4A4A4A;
   a {
     color: #a1dbe3;
   }
   address {
-    padding-left: 1em;
-    padding-top: 1.05em;
+    padding-top: 2%;
     margin: 0;
     white-space: nowrap;
   }
   .social_links ul { 
-    margin-bottom: 0;
-    padding-right: 1em;
+    margin: 0 auto;
+    padding-right: 2%;
+    max-width: 400px;
     li {
-      width: 40px;
-      margin-right:.1em;
+      width: 11%;
+      margin-right: 2%;
       a { 
         color: white;
         &:hover { text-decoration: none}
@@ -277,26 +304,26 @@ footer {
     }
     .email { 
       @include three-dimensional_button($main-color: #c63d2d);
-      padding: .2em .4em;
+      padding: .2em .25%;
      }
     .facebook  { 
       @include three-dimensional_button($main-color: #3B5998);
-      padding: .2em .4em;
+      padding: .2em .25%;
      }
     .twitter  { 
       @include three-dimensional_button($main-color: #00ACED);
-      padding: .2em .4em;
+      padding: .2em .25%;
      }
     .linkedin  { 
       @include three-dimensional_button($main-color: #007bb6);
-      padding: .2em .4em;
+      padding: .2em .25%;
      }
   }
 }
 aside {
   .contact_me_text {
     font-family: 'Raleway';
-    font-size: 16px;
+    font-size: 1em;
     display: inline;
     font-weight: bold;
     position: relative;
@@ -305,7 +332,7 @@ aside {
   .side_links .social_links {
     ul li {
       width: auto;
-      margin-right:.1em;
+      margin-right: 1%;
     }
     a, ul li a {
       padding: 0;
@@ -366,7 +393,7 @@ aside {
 }
 .blog-entries-container {
   .blog-entry {
-    padding: .75em .3em;
+    padding: .75em .3%;
   }
     border-top: 3px outset lightgrey;
   .blog-entry:first-child { border-top: none}
@@ -380,7 +407,7 @@ aside {
       font-family: sans-serif;
       margin-top: .2em;
       font-weight: normal;
-      font-size: 10px;
+      font-size: .625em;
     }
 
 
@@ -388,7 +415,7 @@ aside {
 
   a {
     color: black;
-      font-size: 20;
+      font-size: 1.25em;
   font-weight: 400;
   font-family: 'Times New Roman';
   margin-bottom: 1em;
@@ -405,7 +432,7 @@ aside {
   }
 }
 @media(max-width: 400px){
-  .resume .resume-header {font-size: 14px !important;}
+  .resume .resume-header {font-size: .875em !important;}
       .summary_bullet_points > .col-xs-12 {
     text-align: left;
   }
@@ -433,6 +460,8 @@ nav#navbar-resume-scrollspy ul li {
   background-color: darken(white, 2%);
   border: 1px solid darken(white, 3%);
   color: black;
+  border-radius: 4px;
+  margin: 1% 0;
   h4 {
     font-family: 'Times New Roman'
   }
@@ -445,10 +474,10 @@ nav#navbar-resume-scrollspy ul li {
     -moz-box-shadow: 1px 1px 1px grey;
   }
   .resume-header {
-    font-size: 16px;
+    font-size: 1em;
   }
   .resume-body {
-    font-size: 14px;
+    font-size: .875em;
     margin-bottom: 1em;
     p { margin-bottom: 0;}
   }
@@ -488,11 +517,10 @@ height: 300px;
 
 
   img {
-    border-bottom: 10px solid plum;
-    border-radius: 25px 50px 25px 50px;
-    border-right: 10px solid plum;
+    border-radius: 4px;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 2px 4px 6px plum;
   }
   table {
 border-collapse:separate; 
@@ -504,10 +532,11 @@ border-spacing: 0 .5em;
     .counter {
     font-family: 'Raleway';
     font-weight: 600;
-    font-size: 30px;
-    padding-right: .25em;
+    font-size: 1.875em;
+    padding-right: 2%;
     vertical-align: top;
     line-height: 1;
+    text-shadow: 0 0px, 0 0px, 0 1px plum;
   }
     p {
       margin: 0;
@@ -523,7 +552,7 @@ border-spacing: 0 .5em;
     }
     .praise_content {
       font-family: "Nothing You Could Do";
-      font-size: 16px;
+      font-size: 1em;
       font-weight: bold;
     }
   }
@@ -564,23 +593,25 @@ border-spacing: 0 .5em;
     display: block;
     text-shadow: 0 0, 0 0, 0 1px $light-color;
     background-color: whitesmoke;
+    border-radius: 4px;
   }
     .arrow {
     width: 0;
     height: 0;
     line-height: 0;
-    border-left: 21px solid transparent;
+    border-left: 21.5px solid transparent;
     border-top: 10px solid black;
 
   top: 100%;
   left: 0;
   position: absolute;
-  opacity: .8
+  opacity: .8;
+  z-index: -99999;
   }
 }
 .page_title, .fun_facts_page_title {
     font-family: "Raleway";
-    font-size: 36px;
+    font-size: 2em;
     font-weight: bold;
     margin-top: 1em;
 
@@ -588,6 +619,6 @@ border-spacing: 0 .5em;
   .fun_facts_page_title { 
     font-family: 'Rock Salt' !important;
     color: $dark-color;
-    text-shadow: 1px 1px 3px $light-color;
+    text-shadow: 1px 1px 3px plum;
   }
 
