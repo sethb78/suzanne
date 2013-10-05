@@ -43,13 +43,7 @@
           <% end %>
         <!-- End of horizontal navbar  -->
 
-        <!-- 3d fold title tab only visible on desktop -->
-          <div class="row ">
-            <div class="visible-lg col-md-4">
-              <div class="text-center<% if params[:action] == "fun_facts"%> fun_facts_page_title <%else %> page_title<% end %>"><%= yield(:title) %><% if !yield(:title).blank? %><span class="arrow"></span><% end %></div>
-            </div>
-          </div>
-        <!-- end of 3d fold title tab -->
+
                
         <!-- main content and side bar -->
           <div class="main-content">
