@@ -42,6 +42,10 @@ blockquote { border: none;}
   }
 }
 
+.container {
+  max-width: 100%;
+}
+
 body {
   opacity: 1;
   background:url(texture5.png),-ms-linear-gradient(bottom, #F5F5F5 50%, #A1DBE3 100%);
