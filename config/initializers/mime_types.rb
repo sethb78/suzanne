@@ -13,3 +13,4 @@ Rack::Mime::MIME_TYPES.merge!({
   ".mp3"     => "audio/mpeg",
   ".m4a"     => "audio/mpeg"
 })
+Mime::Type.register "image/svg+xml", :svg  
