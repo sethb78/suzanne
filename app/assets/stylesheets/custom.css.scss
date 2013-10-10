@@ -75,6 +75,8 @@ video {
 // header
 header {
   padding-top: 10px;
+  img.svg { display: none; }
+  html.svg img.png { display: none; }
   .image_container { height: 1 }
   img {
     max-height: 150px;
@@ -117,8 +119,7 @@ header {
   }
 
   img.logo {
-    height: 100%;
-    width: auto;
+
     border: none;
   }
   .tagline {
