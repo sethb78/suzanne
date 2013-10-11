@@ -82,4 +82,6 @@ Suzanne::Application.configure do
   # AWS_SECRET_ACCESS_KEY = ENV['AMAZON_SECRET_KEY']
   # AWS_S3_BUCKET = ENV['AMAZON_BUCKET_NAME']
   
+
+  GA.tracker = 'UA-44801558-1'
 end
