@@ -72,11 +72,14 @@ video {
   background-image: linear-gradient(to top left, #FFFFFF 75%, #A1DBE3 100%);
     background-size: cover;
   }
+
+      img.svg { display: none; }
+      img.png { display: block; }
+      html.svg img.svg { display: block; }
+      html.svg img.png { display: none; }
 // header
 header {
   padding-top: 10px;
-  img.svg { display: none; }
-  html.svg img.png { display: none; }
   .image_container { height: 1 }
   img {
     max-height: 150px;
