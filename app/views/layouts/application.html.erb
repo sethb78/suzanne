@@ -50,14 +50,14 @@
         <!-- main content and side bar -->
           <div class="main-content">
             <div class="row">
-              <div class="<% if params[:action]=="resume" %> col-md-12 col-sm-12 <% else %>col-md-8 col-sm-8 <% end %>col-xs-12 text-center">
+              <div class="<% if params[:action]=="resume" %> col-md-12 col-sm-12 <% else %>col-md-9 col-sm-8 <% end %>col-xs-12 text-center">
                 <%= yield %>
               </div>
 
             <!-- Side Bar, displays link on desktop home page and .... -->
             <% if params[:action] !="resume" %>
               <aside>
-                <div class="col-md-4 col-sm-4 hidden-xs side_links">
+                <div class="col-md-3 col-sm-4 hidden-xs side_links">
                   <%= render 'layouts/contact_bar' %>
                   <% if params[:controller] == "static_pages" && params[:action] == "home" %>
                     <%= render 'vertical_links' %>
