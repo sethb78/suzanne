@@ -42,18 +42,16 @@ blockquote { border: none;}
   }
 }
 
-.container {
-  max-width: 100%;
-}
+
 
 body {
   opacity: 1;
-  background:url(texture5.png),-ms-linear-gradient(bottom, #F5F5F5 50%, #A1DBE3 100%);
-  background:url(texture5.png),-moz-linear-gradient(bottom, #F5F5F5 50%, #A1DBE3 100%);
-  background:url(texture5.png),-o-linear-gradient(bottom, #F5F5F5 50%, #A1DBE3 100%);
-  background:url(texture5.png),-webkit-gradient(linear, left bottom, left bottom, color-stop(50, #F5F5F5), color-stop(1, #A1DBE3));
-  background:url(texture5.png),-webkit-linear-gradient(bottom, #F5F5F5 50%, #A1DBE3 100%);
-  background:url(texture5.png),linear-gradient(bottom top, #F5F5F5 50%, #A1DBE3 100%);
+  background:-ms-linear-gradient(bottom, #F5F5F5 50%, #A1DBE3 100%);
+  background:-moz-linear-gradient(bottom, #F5F5F5 50%, #A1DBE3 100%);
+  background:-o-linear-gradient(bottom, #F5F5F5 50%, #A1DBE3 100%);
+  background:u-webkit-gradient(linear, left bottom, left bottom, color-stop(50, #F5F5F5), color-stop(1, #A1DBE3));
+  background:-webkit-linear-gradient(bottom, #F5F5F5 50%, #A1DBE3 100%);
+  background:linear-gradient(bottom top, #F5F5F5 50%, #A1DBE3 100%);
   background-size: cover;
 
 }
@@ -72,11 +70,14 @@ video {
   background-image: linear-gradient(to top left, #FFFFFF 75%, #A1DBE3 100%);
     background-size: cover;
   }
+
+      img.svg { display: none; }
+      img.png { display: block; }
+      html.svg img.svg { display: block; }
+      html.svg img.png { display: none; }
 // header
 header {
   padding-top: 10px;
-  img.svg { display: none; }
-  html.svg img.png { display: none; }
   .image_container { height: 1 }
   img {
     max-height: 150px;
@@ -127,7 +128,7 @@ header {
     box-shadow: 0 1px 2px grey;
     -webkit-box-shadow: 0 1px 2px grey;
     -moz-box-shadow: 0 1px 2px grey;
-    font-weight: 600;
+    font-weight: bold;
     line-height: 1.5em;
     padding-bottom: 2px;
     max-height: 1.5em;
@@ -142,13 +143,21 @@ header {
 
 
 // horizontal navbar
+@media(min-width: 769px){
+  .horizontal-navbar .navbar-nav {
+    width: 50%;
+    li {
+      border-radius: 4px;
+    }
+  }
+}
+
 .navbar-default {
   margin-left: -15px;
   margin-right: -15px;
   // background: none #3e5657;
   text-align: center;
   .navbar-nav {
-    width: 50%;
     float: none;
     margin: 0 auto;
     background: whitesmoke;
@@ -169,7 +178,6 @@ header {
       border-left: 1px solid #334141;
       border-top: 1px solid #334141;
       border-right: 1px solid #334141;
-      border-radius: 4px;
       a {
         box-shadow: inset 1px 1px 1px #4A4A4A;
         -webkit-box-shadow: 1px 1px 1px #4A4A4A;
