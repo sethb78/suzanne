@@ -86,6 +86,8 @@ GEM
     execjs (2.0.0)
     faker (1.2.0)
       i18n (~> 0.5)
+    fitvidsjs_rails (1.0.0)
+      railties (>= 3.1)
     fog (1.8.0)
       builder
       excon (~> 0.14)
@@ -209,6 +211,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise
   faker
+  fitvidsjs_rails
   fog
   google-analytics-rails
   inherited_resources!

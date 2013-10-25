@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap.min.js
+//= require bjquery-fittext.js
 //= require custom.js
 //= require turbolinks
 
